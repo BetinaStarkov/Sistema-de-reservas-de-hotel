@@ -1,0 +1,33 @@
+# Sistema de Reservas de Hotel
+
+Este projeto é um sistema de gerenciamento de reservas de hotel, desenvolvido com comandos SQL. O sistema permite a criação, leitura, atualização e exclusão (CRUD) de informações relacionadas a hóspedes, quartos e reservas, além de garantir a integridade referencial entre as tabelas.
+
+## Funcionalidades
+- Gerenciamento de hóspedes (criação, listagem, atualização e exclusão).
+- Gerenciamento de quartos (criação, listagem, atualização e exclusão).
+- Gerenciamento de reservas de hóspedes, relacionando com os quartos disponíveis.
+- Consulta de quartos disponíveis para um período específico.
+- Garantia de exclusão em cascata, removendo todas as reservas associadas a um hóspede ou quarto excluído.
+
+## Estrutura do Banco de Dados
+
+O banco de dados contém as seguintes tabelas:
+
+1. **Hospedes**
+   - `id_hospede` (INT, PK, AUTO_INCREMENT)
+   - `nome` (VARCHAR)
+   - `telefone` (VARCHAR)
+   - `email` (VARCHAR)
+
+2. **Quartos**
+   - `id_quarto` (INT, PK, AUTO_INCREMENT)
+   - `numero` (INT)
+   - `tipo` (VARCHAR)
+   - `preco` (DECIMAL)
+
+3. **Reservas**
+   - `id_reserva` (INT, PK, AUTO_INCREMENT)
+   - `id_hospede` (INT, FK)
+   - `id_quarto` (INT, FK)
+   - `data_checkin` (DATE)
+   - `data
