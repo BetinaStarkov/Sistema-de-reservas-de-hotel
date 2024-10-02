@@ -1,0 +1,24 @@
+
+### `gitignore`
+
+Para o `.gitignore`, você pode utilizar as configurações padrões para um projeto baseado em SQL e arquivos locais, como:
+
+```plaintext
+# Ignore arquivos de backup do MySQL
+*.sql~
+
+# Ignore arquivos de log
+*.log
+
+# Ignore arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Ignore diretórios e arquivos do sistema operacional
+node_modules/
+.env
+
+# Arquivos gerados por editores
+.vscode/
+.idea/
+*.swp
